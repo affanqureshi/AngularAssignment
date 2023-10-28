@@ -1,0 +1,20 @@
+<ul class="nav flex-column">
+     <li class="nav-item" (click)="toggleEmployeeMenu()" [class.active]="activeMenuItem === 'employee'">
+       <a class="nav-link" href="javascript:void(0)">Employee</a>
+     </li>
+     <ul *ngIf="isEmployeeMenuOpen" class="pl-3">
+       <li class="nav-item" [routerLink]="['/employee/home']" [class.active]="activeMenuItem === 'home'">
+         <a class="nav-link" href="javascript:void(0)">Home</a>
+       </li>
+       <li class="nav-item" [routerLink]="['/employee/list']" [class.active]="activeMenuItem === 'list'">
+         <a class="nav-link" href="javascript:void(0)">List</a>
+       </li>
+       <li class="nav-item" [routerLink]="['/employee/details']" [class.active]="activeMenuItem === 'details'">
+         <a class="nav-link" href="javascript:void(0)">Details</a>
+       </li>
+     </ul>
+     <li class="nav-item" [routerLink]="['/staff']" [class.active]="activeMenuItem === 'staff'">
+       <a class="nav-link" href="javascript:void(0)">Staff</a>
+     </li>
+   </ul>
+   
